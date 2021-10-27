@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tccservice">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TCCservice">
+        <activity
+            android:name=".DetalhesProdutosActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.ActivityAnuncio"/>
+        <activity
+            android:name=".ActivityCadastro"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCadastrarAnuncio"
+            android:exported="false" />
+        <activity
+            android:name=".ActicityMeusAnuncios"
+            android:exported="false"
+            android:label="@string/title_activity_acticity_meus_anuncios"
+            android:theme="@style/Theme.TCCservice.NoActionBar" />
+        <activity
+            android:name=".activity.Activitylogin"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActivityAnuncio"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
